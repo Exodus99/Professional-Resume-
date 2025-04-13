@@ -65,7 +65,7 @@
       font-size: 1.2rem;
       line-height: 1.8;
       margin-bottom: 1.5rem;
-      color: #fff; /* Ensures the text is white */
+      color: #fff;
       opacity: 0;
       transform: translateY(30px);
       animation: fadeInUp 1.2s forwards;
@@ -137,6 +137,18 @@
   <footer>
     &copy; 2025 Eric Fields. All rights reserved.
   </footer>
+
+  <script>
+    // Force reload when About is clicked, even if already on about.html
+    document.querySelectorAll('a[href="about.html"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        if (window.location.pathname.includes("about.html")) {
+          e.preventDefault(); // prevent default nav behavior
+          location.reload();  // force reload
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
