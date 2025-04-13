@@ -3,124 +3,131 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eric Fields | Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Fields Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f1f2f6;
-      color: #2f3542;
+      font-family: 'Source Sans Pro', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f7f9fc;
+      color: #333;
     }
 
     header {
-      background-color: #1e272e;
-      color: #ffffff;
-      padding: 30px 20px;
+      background-color: #2c3e50;
+      color: #ecf0f1;
       text-align: center;
+      padding: 40px 20px;
     }
 
     header h1 {
-      margin-bottom: 5px;
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
     }
 
     nav {
-      background-color: #2f3542;
+      background-color: #34495e;
       text-align: center;
       padding: 10px 0;
     }
 
     nav a {
-      color: #ffffff;
+      color: #ecf0f1;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-      font-size: 16px;
+      margin: 0 20px;
+      font-weight: bold;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #70a1ff;
+      color: #1abc9c;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 30px auto;
       padding: 20px;
-    }
-
-    .profile-pic {
-      display: block;
-      width: 150px;
-      border-radius: 50%;
-      margin: 0 auto 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    section {
-      background: #ffffff;
-      margin-bottom: 25px;
-      padding: 20px 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
-      border-left: 6px solid #70a1ff;
-      padding-left: 10px;
-      color: #1e272e;
-      font-size: 22px;
-      margin-top: 0;
-      margin-bottom: 15px;
+      color: #2c3e50;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 6px;
+      margin-top: 40px;
     }
 
     h3 {
-      color: #2f3542;
-      margin-top: 20px;
-      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0;
+      font-size: 1.1em;
+      color: #34495e;
     }
 
     ul {
       list-style-type: disc;
-      padding-left: 25px;
-      line-height: 1.7;
+      padding-left: 20px;
+      margin-top: 10px;
     }
 
-    li {
-      margin-bottom: 10px;
-    }
-
-    a {
-      color: #3742fa;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    section {
+      margin-bottom: 30px;
     }
 
     footer {
-      background-color: #1e272e;
-      color: #dfe4ea;
       text-align: center;
-      padding: 15px 10px;
-      font-size: 14px;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      margin-top: 40px;
     }
 
-    @media (max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
+    img.profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+      border: 4px solid #2c3e50;
+    }
 
-      .container {
-        padding: 15px;
-      }
+    a {
+      color: #2980b9;
+    }
 
-      section {
-        padding: 15px 20px;
-      }
+    a:hover {
+      color: #1abc9c;
+    }
+
+    .job-title {
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+
+    .job-dates {
+      font-style: italic;
+      font-size: 0.95em;
+      color: #7f8c8d;
+    }
+
+    .card-section {
+      background-color: #fdfdfd;
+      border-left: 5px solid #1abc9c;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
     }
   </style>
 </head>
@@ -133,12 +140,12 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="aboutme.html">About Me</a>
+    <a href="aboutme.html">About me</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <div class="container">
-    <img src="headshot.png" alt="Eric Fields Profile Photo" class="profile-pic" />
+    <img src="headshot.png" alt="Eric Fields Profile Photo" class="profile-pic">
 
     <section>
       <h2>Summary</h2>
@@ -155,43 +162,52 @@
 
     <section>
       <h2>Work Experience</h2>
-      <h3>Technical Support Engineer – Viz.ai | May 2023 – Present</h3>
-      <ul>
-        <li>Utilize AI-driven technologies and DICOM expertise to analyze medical imaging data, troubleshoot algorithmic and transmission issues, and resolve TCP protocol problems, ensuring accurate data transfer and workflow efficiency</li>
-        <li>in a 24/7 on-call rotation, managing virtual machines and utilizing advanced cloud platform features to ensure seamless integration, optimal performance, and reliable connectivity</li> 
-        <li>Leverage expertise in Linux system administration, Network Management, DevOps operations, and AWS</li>
-        <li>Serve as the SME for internal infrastructure, collaborating with cross-functional teams to quickly address technical challenges</li>
-        <li>Deliver advanced technical support to both technical and non-technical users of the Viz app and its infrastructure, ensuring seamless user experiences</li>
-        <li>Author knowledgebase articles, troubleshooting guides, FAQs, and support tools to enhance user support</li>
-      </ul>
 
-      <h3>Customer Success Implementation Specialist – Trustwell | May 2022 – April 2023</h3>
-      <ul>
-        <li>Automated business tasks by writing and running scripts in Python for SaaS based platform</li>
-        <li>Utilized Advanced Excel functions, Power Query, and Power BI to automate workflows, clean data, and generate actionable insights</li>
-        <li>Managed customer onboarding and implementation processes, ensuring successful integration of Trustwell's solutions into client environments</li>
-        <li>Collaborated with cross-functional teams to ensure smooth project execution and customer satisfaction</li>
-        <li>Worked with relevant teams to proactively handle customers' critical issues, recommend environment upgrades or add-ons, upgrade readiness, new feature awareness, and maintenance windows</li>
-      </ul>
+      <div class="card-section">
+        <h3><span class="job-title">Technical Support Engineer – Viz.ai</span><span class="job-dates">May 2023 – Present</span></h3>
+        <ul>
+          <li>Utilize AI-driven technologies and DICOM expertise to analyze medical imaging data...</li>
+          <li>In a 24/7 on-call rotation, managing virtual machines...</li>
+          <li>Leverage expertise in Linux system administration...</li>
+          <li>Serve as the SME for internal infrastructure...</li>
+          <li>Deliver advanced technical support to both technical and non-technical users...</li>
+          <li>Author knowledgebase articles, troubleshooting guides, FAQs...</li>
+        </ul>
+      </div>
 
-      <h3>Senior Technical Support Specialist & Coach – Verizon Wireless | Sep 2017 – Feb 2022</h3>
-      <ul>
-        <li>Troubleshot and resolved Tier 2 escalated issues involving LTE/5G connectivity, VoLTE, device configuration, and SIM/network provisioning to restore customer service</li>
-        <li>Utilized diagnostic tools to analyze device logs, cell tower communication, and radio signal metrics to identify mobile network disruptions and recommend corrective actions</li>
-        <li>Deployed and configured in-home network extenders (femtocells) for customers with poor coverage, ensuring secure VPN tunnels back to Verizon’s core network</li>
-        <li>Validated RF signal strength, bandwidth allocation, and infrastructure health using internal dashboards and engineering tools</li>
-        <li>Collaborated with field technicians and NOC teams to escalate infrastructure outages and coordinate real-time resolution of network faults</li>
-        <li>Mentored and coached new hires on mobile networking principles, customer-first troubleshooting, and Verizon’s internal tools and support methodologies</li>
-      </ul>
+      <div class="card-section">
+        <h3><span class="job-title">Customer Success Implementation Specialist – Trustwell</span><span class="job-dates">May 2022 – April 2023</span></h3>
+        <ul>
+          <li>Automated business tasks by writing and running scripts in Python...</li>
+          <li>Utilized Advanced Excel functions, Power Query, and Power BI...</li>
+          <li>Managed customer onboarding and implementation processes...</li>
+          <li>Collaborated with cross-functional teams to ensure smooth project execution...</li>
+          <li>Worked with relevant teams to proactively handle customers' critical issues...</li>
+        </ul>
+      </div>
 
-      <h3>Customer Relations Manager – Verizon | March 2014 – September 2017</h3>
-      <ul>
-        <li>Led a high-performing team of 15+ customer support advocates, driving KPI achievement across case resolution, customer satisfaction, and technical escalations</li>
-        <li>Analyzed support trends related to device/network issues to proactively train team members and reduce repeat calls</li>
-        <li>Worked cross-functionally with engineering and escalation teams to address systemic network concerns impacting service reliability</li>
-        <li>Developed knowledge-sharing sessions and job aids to help team handle device provisioning, SIM swap procedures, and service restoration workflows</li>
-        <li>Oversaw day-to-day operations, including scheduling, coaching, and performance management in a fast-paced environment handling hundreds of daily interactions</li>
-      </ul>
+      <div class="card-section">
+        <h3><span class="job-title">Senior Technical Support Specialist & Coach – Verizon Wireless</span><span class="job-dates">Sep 2017 – Feb 2022</span></h3>
+        <ul>
+          <li>Troubleshot and resolved Tier 2 escalated issues involving LTE/5G connectivity...</li>
+          <li>Utilized diagnostic tools to analyze device logs...</li>
+          <li>Deployed and configured in-home network extenders...</li>
+          <li>Validated RF signal strength, bandwidth allocation...</li>
+          <li>Collaborated with field technicians and NOC teams...</li>
+          <li>Mentored and coached new hires...</li>
+        </ul>
+      </div>
+
+      <div class="card-section">
+        <h3><span class="job-title">Customer Relations Manager – Verizon</span><span class="job-dates">Mar 2014 – Sep 2017</span></h3>
+        <ul>
+          <li>Led a high-performing team of 15+ customer support advocates...</li>
+          <li>Analyzed support trends related to device/network issues...</li>
+          <li>Worked cross-functionally with engineering and escalation teams...</li>
+          <li>Developed knowledge-sharing sessions and job aids...</li>
+          <li>Oversaw day-to-day operations including scheduling, coaching, and performance management...</li>
+        </ul>
+      </div>
     </section>
 
     <section>
@@ -213,7 +229,7 @@
         <li>Power BI Master Class – Udemy (Jan 2023)</li>
         <li>REST API Testing – Udemy</li>
         <li>Linux Command Line Basics – Udemy</li>
-        <li>Microsoft Excel Advanced – Udemy<br><a href="https://www.udemy.com/certificate/UC-f8b18805-51fd-409c-a952-d7f33bfc2d3e/" target="_blank">View Credential</a></li>
+        <li>Microsoft Excel Advanced – <a href="https://www.udemy.com/certificate/UC-f8b18805-51fd-409c-a952-d7f33bfc2d3e/" target="_blank">View Credential</a></li>
         <li><a href="https://www.linkedin.com/in/eric-fields-80497b232/details/certifications/" target="_blank">View More on LinkedIn</a></li>
       </ul>
     </section>
