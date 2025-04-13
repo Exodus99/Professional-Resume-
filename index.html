@@ -20,6 +20,27 @@
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
+    header {
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #1e90ff;
+      font-weight: bold;
+    }
+    .profile-pic {
+      display: block;
+      margin: 0 auto 2em auto;
+      border-radius: 50%;
+      max-width: 150px;
+      border: 3px solid #00bfff;
+    }
     h1, h2, h3 {
       color: #00bfff;
     }
@@ -32,8 +53,20 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>Eric Fields</h1>
+    <p>Technical Support Engineer | Cloud | Networking | DevOps</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About me</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <img src="headshot.png" alt="Eric Fields Profile Photo" class="profile-pic">
+
     <p>Experienced Technical Support Engineer with a strong background in cloud platforms, DevOps, networking, and AI-based technologies. Proven track record of solving complex problems, driving operational excellence, and delivering value to both technical and non-technical users.</p>
 
     <section>
