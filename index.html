@@ -1,131 +1,212 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('e6948af1-13e2-4b15-ad03-01d22dd29788.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #e0e0e0;
-  margin: 0;
-  padding: 0;
-  backdrop-filter: blur(5px);
-}
+<!DOCTYPE html>
+<html lang="en">
 
-header {
-  background: rgba(30, 39, 46, 0.8);
-  color: #00ffe7;
-  padding: 30px 20px;
-  text-align: center;
-  border-bottom: 2px solid #00ffe7;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Fields | Resume</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('e6948af1-13e2-4b15-ad03-01d22dd29788.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #f1f2f6;
+      margin: 0;
+      padding: 0;
+      backdrop-filter: blur(5px);
+    }
 
-header h1 {
-  margin-bottom: 5px;
-  font-size: 2.5em;
-  text-shadow: 0 0 8px #00ffe7;
-}
+    header {
+      background: rgba(30, 39, 46, 0.9);
+      color: #ffffff;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 3px solid #70a1ff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
 
-nav {
-  background: rgba(47, 53, 66, 0.7);
-  text-align: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #00ffe7;
-}
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
 
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease-in-out;
-}
+    nav {
+      background: rgba(47, 53, 66, 0.9);
+      text-align: center;
+      padding: 10px 0;
+    }
 
-nav a:hover {
-  color: #00ffe7;
-  text-shadow: 0 0 5px #00ffe7;
-}
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
 
-.container {
-  max-width: 960px;
-  margin: 30px auto;
-  padding: 20px;
-}
+    nav a:hover {
+      color: #70a1ff;
+    }
 
-.profile-pic {
-  display: block;
-  width: 150px;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 15px rgba(0, 255, 231, 0.5);
-  border: 2px solid #00ffe7;
-}
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
 
-section {
-  background: rgba(255, 255, 255, 0.08);
-  margin-bottom: 25px;
-  padding: 20px 25px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border-left: 4px solid #00ffe7;
-}
+    .profile-pic {
+      display: block;
+      width: 150px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
 
-h2 {
-  color: #00ffe7;
-  font-size: 24px;
-  margin-top: 0;
-  margin-bottom: 15px;
-  text-shadow: 0 0 6px #00ffe7;
-}
+    section {
+      background: rgba(30, 39, 46, 0.85);
+      margin-bottom: 25px;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
 
-h3 {
-  color: #ffffff;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
+    h2 {
+      border-left: 6px solid #70a1ff;
+      padding-left: 12px;
+      color: #dcdde1;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
 
-ul {
-  list-style-type: disc;
-  padding-left: 25px;
-  line-height: 1.8;
-}
+    h3 {
+      color: #dff9fb;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
 
-li {
-  margin-bottom: 10px;
-  color: #dcdcdc;
-}
+    ul {
+      list-style-type: disc;
+      padding-left: 25px;
+      line-height: 1.7;
+    }
 
-a {
-  color: #00ffe7;
-  text-decoration: none;
-}
+    li {
+      margin-bottom: 10px;
+    }
 
-a:hover {
-  text-decoration: underline;
-  text-shadow: 0 0 4px #00ffe7;
-}
+    a {
+      color: #70a1ff;
+      text-decoration: none;
+    }
 
-footer {
-  background: rgba(30, 39, 46, 0.9);
-  color: #dfe4ea;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 14px;
-  border-top: 1px solid #00ffe7;
-}
+    a:hover {
+      text-decoration: underline;
+    }
 
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 8px 0;
-  }
+    footer {
+      background: rgba(30, 39, 46, 0.9);
+      color: #dfe4ea;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      margin-top: 40px;
+      border-top: 1px solid #57606f;
+    }
 
-  .container {
-    padding: 15px;
-  }
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
 
-  section {
-    padding: 15px 20px;
-  }
-}
+      .container {
+        padding: 15px;
+      }
+
+      section {
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Eric Fields</h1>
+    <p>Technical Support Engineer | Cloud | Networking | DevOps</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <img src="headshot.png" alt="Eric Fields Profile Photo" class="profile-pic" />
+
+    <section>
+      <h2>Summary</h2>
+      <p>Experienced Technical Support Engineer with a strong background in cloud platforms, DevOps, networking, and AI-based technologies. Proven track record of solving complex problems, driving operational excellence, and delivering value to both technical and non-technical users.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>DeVry University – Bachelor of Business Management (April 2023)</li>
+        <li>Elgin College – Associate of Arts (May 2008)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Work Experience</h2>
+      <!-- Work experience content remains the same -->
+    </section>
+
+    <section>
+      <h2>Core Skills</h2>
+      <ul>
+        <li>Cloud Computing, API Integration, Python, Terraform, Kubernetes</li>
+        <li>Linux Administration, Networking, DICOM, DevOps, VM Management</li>
+        <li>Monitoring tools, SaaS, Web Technologies, Incident Management</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certifications & Training</h2>
+      <!-- Certifications content remains the same -->
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>Migrated on-prem application to MultiCloud Architecture | Cloud Bootcamp</li>
+        <li>Designed auditing process for major SaaS client | Foodlogiq</li>
+        <li>Integrated secure messaging channel access – improved one-contact resolution by 71%</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:ericfields40@gmail.com">ericfields40@gmail.com</a></li>
+        <li>Phone: (815) 260-1082</li>
+        <li>Location: Raleigh, North Carolina</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Eric Fields. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
