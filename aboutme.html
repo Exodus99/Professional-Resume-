@@ -65,6 +65,7 @@
       font-size: 1.2rem;
       line-height: 1.8;
       margin-bottom: 1.5rem;
+      color: #fff; /* Ensures the text is white */
       opacity: 0;
       transform: translateY(30px);
       animation: fadeInUp 1.2s forwards;
@@ -116,7 +117,6 @@
 
   <div class="container">
     <h1>About Me</h1>
-    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
     <p>With over 12 years of technical experience, I specialize in cloud computing, SaaS platforms, and technical support.
       My background includes working with major cloud providers like AWS and GCP, managing Ubuntu and CentOS servers, and
       troubleshooting complex network issues. Currently, I provide technical support at Viz.ai, where I help optimize
@@ -137,16 +137,6 @@
   <footer>
     &copy; 2025 Your Name. All rights reserved.
   </footer>
-
-  <script>
-    window.onscroll = function () {
-      if (window.scrollY > 50) {
-        document.body.classList.add('scrolled');
-      } else {
-        document.body.classList.remove('scrolled');
-      }
-    };
-  </script>
 </body>
 
 </html>
