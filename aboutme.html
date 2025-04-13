@@ -138,15 +138,17 @@
     &copy; 2025 Eric Fields. All rights reserved.
   </footer>
 
-  <script>
-    document.getElementById('about-link').addEventListener('click', function (e) {
-      const currentPage = window.location.pathname.split('/').pop();
-      if (currentPage === '' || currentPage === 'about.html') {
-        e.preventDefault();
-        location.href = 'about.html'; // Forces reload
-      }
-    });
-  </script>
+<script>
+  document.getElementById('about-link').addEventListener('click', function (e) {
+    const currentUrl = window.location.href;
+    const targetUrl = 'https://exodus99.github.io/Professional-Resume-/aboutme.html';
+    
+    if (currentUrl === targetUrl || currentUrl === targetUrl + '#') {
+      e.preventDefault();
+      window.location.href = targetUrl; // Force reload
+    }
+  });
+</script>
 </body>
 
 </html>
