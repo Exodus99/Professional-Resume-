@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me</title>
   <style>
     body {
@@ -110,7 +110,7 @@
     <div class="logo"><a href="index.html">My Portfolio</a></div>
     <div>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html" id="about-link">About</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -139,15 +139,14 @@
   </footer>
 
   <script>
-  document.querySelectorAll('a[href="about.html"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-      const currentPath = window.location.pathname.split("/").pop();
-      if (currentPath === "about.html") {
+    document.getElementById('about-link').addEventListener('click', function (e) {
+      const currentPage = window.location.pathname.split('/').pop();
+      if (currentPage === '' || currentPage === 'about.html') {
         e.preventDefault();
-        window.location.href = "about.html"; // or use location.reload()
+        location.href = 'about.html'; // Forces reload
       }
     });
-  });
-</script>
+  </script>
+</body>
 
 </html>
