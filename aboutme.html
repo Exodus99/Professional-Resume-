@@ -11,8 +11,9 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url('ai.png') no-repeat center center fixed;
+      background-attachment: fixed;
       background-size: cover;
-      color: #fff;
+      scroll-behavior: smooth;
     }
 
     nav {
@@ -24,6 +25,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      transition: box-shadow 0.3s ease;
     }
 
     nav a {
@@ -31,11 +33,12 @@
       text-decoration: none;
       margin: 0 1rem;
       font-weight: bold;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
     nav a:hover {
       color: #00bfff;
+      transform: scale(1.1);
     }
 
     .container {
@@ -52,12 +55,26 @@
       font-size: 3rem;
       margin-bottom: 1.5rem;
       color: #00bfff;
+      text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s forwards;
     }
 
     p {
       font-size: 1.2rem;
       line-height: 1.8;
       margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     footer {
@@ -67,6 +84,22 @@
       background-color: rgba(0, 0, 0, 0.8);
       color: #aaa;
       margin-top: 4rem;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      max-width: 150px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0, 191, 255, 0.5);
+    }
+
+    body.scrolled nav {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     }
   </style>
 </head>
@@ -83,6 +116,7 @@
 
   <div class="container">
     <h1>About Me</h1>
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
     <p>With over 12 years of technical experience, I specialize in cloud computing, SaaS platforms, and technical support.
       My background includes working with major cloud providers like AWS and GCP, managing Ubuntu and CentOS servers, and
       troubleshooting complex network issues. Currently, I provide technical support at Viz.ai, where I help optimize
@@ -103,6 +137,16 @@
   <footer>
     &copy; 2025 Your Name. All rights reserved.
   </footer>
+
+  <script>
+    window.onscroll = function () {
+      if (window.scrollY > 50) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    };
+  </script>
 </body>
 
 </html>
