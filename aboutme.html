@@ -139,16 +139,15 @@
   </footer>
 
   <script>
-    // Force reload when About is clicked, even if already on about.html
-    document.querySelectorAll('a[href="about.html"]').forEach(link => {
-      link.addEventListener('click', function (e) {
-        if (window.location.pathname.includes("about.html")) {
-          e.preventDefault(); // prevent default nav behavior
-          location.reload();  // force reload
-        }
-      });
+  document.querySelectorAll('a[href="about.html"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const currentPath = window.location.pathname.split("/").pop();
+      if (currentPath === "about.html") {
+        e.preventDefault();
+        window.location.href = "about.html"; // or use location.reload()
+      }
     });
-  </script>
-</body>
+  });
+</script>
 
 </html>
