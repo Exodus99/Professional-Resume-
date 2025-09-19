@@ -80,6 +80,37 @@
     a {
       color: #00bfff;
     }
+    /* Testimonials */
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      margin-top: 1.5em;
+    }
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 5px solid #00bfff;
+      padding: 1.5em;
+      border-radius: 10px;
+      font-style: italic;
+      animation: fadeIn 1.5s ease-in-out;
+      text-align: center;
+    }
+    .testimonial-card p {
+      color: #f0f0f0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1em;
+    }
+    .testimonial-img {
+      max-width: 250px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .testimonial-img:hover {
+      transform: scale(1.05);
+    }
     @keyframes pulseGlow {
       0%, 100% {
         text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.4);
@@ -125,6 +156,7 @@
 
     <section>
       <h2>Work Experience</h2>
+      <!-- Viz.ai -->
       <h3>Technical Support Engineer – Viz.ai | May 2023 – Present</h3>
       <ul>
         <li>Utilize AI-driven technologies and DICOM expertise to analyze medical imaging data, troubleshoot algorithmic and transmission issues, and resolve TCP protocol problems, ensuring accurate data transfer and workflow efficiency</li>
@@ -134,7 +166,7 @@
         <li>Deliver advanced technical support to both technical and non-technical users of the Viz app and its infrastructure, ensuring seamless user experiences</li>
         <li>Author knowledgebase articles, troubleshooting guides, FAQs, and support tools to enhance user support</li>
       </ul>
-
+      <!-- Trustwell -->
       <h3>Customer Success Implementation Specialist – Trustwell | May 2022 – April 2023</h3>
       <ul>
         <li>Automated business tasks by writing and running scripts in Python for SaaS based platform</li>
@@ -143,7 +175,7 @@
         <li>Collaborated with cross-functional teams to ensure smooth project execution and customer satisfaction</li>
         <li>Worked with relevant teams to proactively handle customers' critical issues, recommend environment upgrades or add-ons, upgrade readiness, new feature awareness, and maintenance windows</li>
       </ul>
-
+      <!-- Verizon -->
       <h3>Senior Technical Support Specialist & Coach – Verizon Wireless | Sep 2017 – Feb 2022</h3>
       <ul>
         <li>Troubleshot and resolved Tier 2 escalated issues involving LTE/5G connectivity, VoLTE, device configuration, and SIM/network provisioning to restore customer service</li>
@@ -153,7 +185,6 @@
         <li>Collaborated with field technicians and NOC teams to escalate infrastructure outages and coordinate real-time resolution of network faults</li>
         <li>Mentored and coached new hires on mobile networking principles, customer-first troubleshooting, and Verizon’s internal tools and support methodologies</li>
       </ul>
-
       <h3>Customer Relations Manager - Verizon | March 2014 - September 2017</h3>
       <ul>
         <li>Led a high-performing team of 15+ customer support advocates, driving KPI achievement across case resolution, customer satisfaction, and technical escalations</li>
@@ -196,18 +227,28 @@
       </ul>
     </section>
 
+    <!-- ✅ Testimonials Section -->
     <section>
-      <h2>Testimonials</h2>
-      <h3>Verizon – Technical Support Specialist</h3>
-      <ul>
-        <li>Mentored and coached new hires on mobile networking principles, customer-first troubleshooting, and Verizon’s internal tools and support methodologies.</li>
-        <li>Deployed and configured in-home network extenders (femtocells) for customers with poor coverage, ensuring secure VPN tunnels back to Verizon’s core network.</li>
-        <li>Validated RF signal strength, bandwidth allocation, and infrastructure health using internal dashboards and engineering tools.</li>
-        <li>Automated and managed data workflows by utilizing advanced Excel, Power Query, and Power BI for reporting and analysis.</li>
-      </ul>
+      <h2>Colleague Testimonials</h2>
+      <div class="testimonials">
+
+        <div class="testimonial-card">
+          <p>"Eric jumped into a fire today with a very frustrated customer, and by the end of the call she was laughing and relieved. Not only did Eric resolve the issues, but he empathized and made her feel heard and important. Thank you Eric and the ENTIRE Support team for your professionalism—all of your hard work does not go unnoticed!" ⭐⭐⭐⭐⭐</p>
+          <a href="images/kudos1.png" target="_blank">
+            <img src="images/kudos1.png" alt="Kudos 1" class="testimonial-img">
+          </a>
+        </div>
+
+        <div class="testimonial-card">
+          <p>"The Radiology team at Cleveland Clinic raved about our proactive monitoring. They said they’ve been trying to get vendors to do this for years, and Eric delivered. Eric notified them about an issue they didn’t even know they had and resolved it. The client was so appreciative and impressed with how proactive and thorough he was. Huge thank you to Eric for setting such a high standard and representing Viz so well!" 🎉</p>
+          <a href="images/kudos2.png" target="_blank">
+            <img src="images/kudos2.png" alt="Kudos 2" class="testimonial-img">
+          </a>
+        </div>
+
+      </div>
     </section>
+
   </div>
 </body>
 </html>
-
-
