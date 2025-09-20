@@ -4,299 +4,173 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eric Fields Resume</title>
-  <meta name="description" content="Resume of Eric Fields — Technical Support Engineer with strengths in cloud, networking, DevOps, and AI-driven support." />
-
   <style>
-    :root{
-      --bg-accent:#00bfff;
-      --text:#ffffff;
-      --text-dim:#f0f0f0;
-      --glass:rgba(0,0,0,0.75);
-      --card:rgba(255,255,255,0.05);
-      --shadow:0 0 20px rgba(0,0,0,0.5);
-      --radius:15px;
-    }
-
-    /* Reset-ish */
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
+    body {
+      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--text);
       background: url('aii.png') no-repeat center center fixed;
       background-size: cover;
+      color: white;
     }
-
-    /* Skip link */
-    .skip-link{
-      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
-    }
-    .skip-link:focus{
-      left:1rem;top:1rem;width:auto;height:auto;background:#000;color:#fff;
-      padding:.5rem .75rem;border-radius:.5rem;outline:2px solid var(--bg-accent);
-      z-index:9999;
-    }
-
-    header{
-      text-align:center;
-      margin: 0 auto 1.25rem auto;
-      padding-top: 1.25rem;
-      animation: fadeInUp 1.2s ease-in-out;
-    }
-
-    h1{
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      margin: .25rem 0 .25rem 0;
-      background: linear-gradient(90deg, #00ffff, var(--bg-accent), #00ffff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 10px rgba(0,255,255,0.6), 0 0 20px rgba(0,255,255,0.4);
-      animation: pulseGlow 3s infinite ease-in-out;
-    }
-    header p{margin:0;font-size:1.05rem;opacity:.95}
-
-    nav{
-      text-align:center;
-      margin-bottom: 1.5rem;
-    }
-    nav a{
-      color: var(--text);
-      text-decoration:none;
-      margin: 0 14px;
-      position:relative;
-      padding: .25rem 0;
-    }
-    nav a::after{
-      content:'';
-      position:absolute;left:0;bottom:-5px;height:2px;width:0%;
-      background-color: var(--bg-accent);
-      transition: width .25s ease;
-    }
-    nav a:hover, nav a:focus{color:var(--bg-accent)}
-    nav a:hover::after, nav a:focus::after{width:100%}
-
-    .container{
-      background-color: var(--glass);
+    .container {
+      background-color: rgba(0, 0, 0, 0.75);
       max-width: 900px;
       margin: auto;
-      padding: clamp(1rem, 3vw, 2rem);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      padding: 2em;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
-
-    .profile-pic{
-      display:block;margin: 0 auto 1.5rem auto;
-      width: 150px; max-width: 40vw; height:auto;
-      border-radius: 50%;
-      border: 3px solid var(--bg-accent);
-    }
-
-    section{margin: 1.75rem 0}
-    h2, h3{color: var(--bg-accent); margin: 0 0 .75rem 0}
-    p{font-size:1.05rem; line-height:1.6}
-
-    ul{padding-left: 1.25rem; margin: .25rem 0}
-    li{margin: .4rem 0}
-
-    a{color: var(--bg-accent)}
-
-    /* Testimonials */
-    .testimonials{
-      display: grid;
-      gap: 1.5rem;
-    }
-    @media (min-width: 800px){
-      .testimonials{grid-template-columns: 1fr 1fr}
-    }
-
-    .testimonial-card{
-      background: var(--card);
-      border-left: 5px solid var(--bg-accent);
-      padding: 1rem 1.25rem;
-      border-radius: 12px;
-      animation: fadeIn 1.2s ease-in-out;
+    header {
       text-align: center;
+      margin-bottom: 1.5em;
+      animation: fadeInUp 1.2s ease-in-out;
     }
-    .testimonial-card p{
-      color: var(--text-dim);
+    h1 {
+      color: #ffffff;
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #00ffff, #00bfff, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.4);
+      animation: pulseGlow 3s infinite ease-in-out;
+      margin: 0.25rem 0 0.25rem 0;
+    }
+    p { font-size: 1.2rem; }
+
+    nav { text-align: center; margin-bottom: 2em; }
+    nav a {
+      color: white; text-decoration: none; margin: 0 15px; position: relative; transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: ''; position: absolute; left: 0; bottom: -5px; width: 0%; height: 2px; background-color: #00bfff; transition: width 0.3s ease;
+    }
+    nav a:hover { color: #00bfff; }
+    nav a:hover::after { width: 100%; }
+
+    .profile-pic {
+      display: block; margin: 0 auto 2em auto; border-radius: 50%; max-width: 150px; border: 3px solid #00bfff;
+    }
+    h2, h3 { color: #00bfff; }
+    ul { padding-left: 20px; }
+    a { color: #00bfff; }
+
+    /* ===== Testimonials ===== */
+    .testimonials {
+      display: grid;
+      gap: 1.5em;
+    }
+    @media (min-width: 900px) {
+      .testimonials { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* initial state for staggered entrance */
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 5px solid #00bfff;
+      padding: 1.5em;
+      border-radius: 10px;
+      font-style: italic;
+      text-align: center;
+      /* hover polish */
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      /* entrance (staggered) */
+      opacity: 0;
+      transform: translateY(16px);
+      animation: cardIn 650ms ease-out forwards;
+      will-change: opacity, transform;
+    }
+    /* stagger the delays */
+    .testimonial-card:nth-child(1) { animation-delay: 120ms; }
+    .testimonial-card:nth-child(2) { animation-delay: 320ms; }
+    .testimonial-card:nth-child(3) { animation-delay: 520ms; }
+
+    /* hover lift + glow */
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 191, 255, 0.4);
+      border-color: #00ffff;
+    }
+
+    .testimonial-card p {
+      color: #f0f0f0;
       font-size: 1rem;
       line-height: 1.6;
-      font-style: italic;
-      margin: .75rem 0 0 0;
+      margin-bottom: 1em;
     }
-    .testimonial-card figure{margin:0}
-    .testimonial-img{
+    .testimonial-img {
       max-width: 90%;
-      height:auto;
-      border-radius: 10px;
-      border: 2px solid var(--bg-accent);
+      border-radius: 8px;
+      border: 2px solid #00bfff;
       display: block;
       margin: 0 auto;
-      transition: transform .25s ease, box-shadow .25s ease;
-      cursor: zoom-in;
+      transition: transform 0.3s ease;
+      cursor: pointer;
     }
-    .testimonial-img:hover{
-      transform: scale(1.03);
-      box-shadow: 0 0 0 3px rgba(0,191,255,0.25);
-    }
-    .testimonial-caption{
-      font-size:.9rem; opacity:.8; margin-top:.5rem
+    .testimonial-img:hover { transform: scale(1.05); }
+    .testimonial-caption {
+      font-size: 0.9rem; opacity: 0.85; margin-top: 0.5em; font-style: normal; color: #ddd;
     }
 
-    footer{
-      text-align:center;color:#ddd;font-size:.9rem;margin:1.5rem 0 .75rem 0;
+    /* Keyframes */
+    @keyframes pulseGlow {
+      0%,100% { text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.4); }
+      50% { text-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 40px rgba(0, 255, 255, 0.6); }
     }
-
-    /* Animations */
-    @keyframes pulseGlow{
-      0%,100%{ text-shadow: 0 0 10px rgba(0,255,255,.6), 0 0 20px rgba(0,255,255,.4) }
-      50%{ text-shadow: 0 0 20px rgba(0,255,255,.9), 0 0 40px rgba(0,255,255,.6) }
-    }
-    @keyframes fadeInUp{ from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)} }
-    @keyframes fadeIn{ from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes cardIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header role="banner">
+  <header>
     <h1>Eric Fields</h1>
-    <p>Technical Support Engineer&nbsp;|&nbsp;Cloud&nbsp;|&nbsp;Networking&nbsp;|&nbsp;DevOps</p>
+    <p>Technical Support Engineer | Cloud | Networking | DevOps</p>
   </header>
 
-  <nav aria-label="Primary">
+  <nav>
     <a href="index.html">Home</a>
-    <a href="#work">Work</a>
-    <a href="#skills">Skills</a>
-    <a href="#certs">Certifications</a>
-    <a href="#projects">Projects</a>
-    <a href="#testimonials">Testimonials</a>
     <a href="aboutme.html">About me</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main id="main" class="container" role="main">
-    <img src="headshot.png" alt="Headshot of Eric Fields" class="profile-pic" loading="lazy" />
+  <div class="container">
+    <img src="headshot.png" alt="Eric Fields Profile Photo" class="profile-pic" />
 
-    <section aria-labelledby="summary">
-      <h2 id="summary">Summary</h2>
-      <p>Experienced Technical Support Engineer with a strong background in cloud platforms, DevOps, networking, and AI-based technologies. Proven track record of solving complex problems, driving operational excellence, and delivering value to both technical and non-technical users.</p>
-    </section>
+    <p>Experienced Technical Support Engineer with a strong background in cloud platforms, DevOps, networking, and AI-based technologies. Proven track record of solving complex problems, driving operational excellence, and delivering value to both technical and non-technical users.</p>
 
-    <section aria-labelledby="edu">
-      <h2 id="edu">Education</h2>
-      <ul>
-        <li>DeVry University — Bachelor of Business Management (April 2023)</li>
-        <li>Elgin College — Associate of Arts (May 2008)</li>
-      </ul>
-    </section>
+    <!-- (Keep your Education, Work Experience, Skills, Certifications, and Projects sections here) -->
 
-    <section id="work" aria-labelledby="work-h">
-      <h2 id="work-h">Work Experience</h2>
-
-      <h3>Technical Support Engineer — Viz.ai | May 2023 – Present</h3>
-      <ul>
-        <li>Utilize AI-driven technologies and DICOM expertise to analyze medical imaging data, troubleshoot algorithmic and transmission issues, and resolve TCP protocol problems, ensuring accurate data transfer and workflow efficiency.</li>
-        <li>Manage virtual machines and leverage advanced cloud platform capabilities to ensure seamless integration, high performance, and reliable connectivity.</li>
-        <li>Leverage expertise in Linux system administration, Network Management, DevOps operations, and AWS.</li>
-        <li>Serve as the SME for internal infrastructure, collaborating with cross-functional teams to quickly address technical challenges.</li>
-        <li>Deliver advanced technical support to both technical and non-technical users of the Viz app and its infrastructure.</li>
-        <li>Author knowledgebase articles, troubleshooting guides, FAQs, and support tools to enhance user support.</li>
-      </ul>
-
-      <h3>Customer Success Implementation Specialist — Trustwell | May 2022 – April 2023</h3>
-      <ul>
-        <li>Automated business tasks by writing and running scripts in Python for a SaaS platform.</li>
-        <li>Utilized Advanced Excel, Power Query, and Power BI to automate workflows, clean data, and generate actionable insights.</li>
-        <li>Managed customer onboarding and implementation processes, ensuring successful integration of Trustwell solutions.</li>
-        <li>Collaborated with cross-functional teams to ensure smooth project execution and customer satisfaction.</li>
-        <li>Proactively handled critical issues, recommended upgrades/add-ons, and coordinated maintenance windows.</li>
-      </ul>
-
-      <h3>Senior Technical Support Specialist & Coach — Verizon Wireless | Sep 2017 – Feb 2022</h3>
-      <ul>
-        <li>Resolved Tier 2 escalations involving LTE/5G, VoLTE, device configuration, and SIM/network provisioning to restore service.</li>
-        <li>Used diagnostic tools to analyze device logs, tower communication, and RF metrics; identified disruptions and drove corrective actions.</li>
-        <li>Deployed and configured in-home network extenders (femtocells), establishing secure VPN tunnels to Verizon’s core network.</li>
-        <li>Validated RF signal strength, bandwidth utilization, and infrastructure health using internal dashboards and engineering tools.</li>
-        <li>Coordinated with field technicians and NOC to escalate outages and resolve network faults in real time.</li>
-        <li>Trained new hires on mobile networking, customer-first troubleshooting, and internal support toolsets.</li>
-      </ul>
-
-      <h3>Customer Relations Manager — Verizon | Mar 2014 – Sep 2017</h3>
-      <ul>
-        <li>Led a team of 15+ support advocates; coached performance and drove KPI achievement across resolution and CSAT.</li>
-        <li>Analyzed device/network support trends to reduce repeat contacts with targeted training.</li>
-        <li>Partnered with engineering/escalation teams to address systemic reliability issues.</li>
-        <li>Built job aids for provisioning, SIM swaps, and restoration workflows; improved first-contact resolution.</li>
-        <li>Managed scheduling, coaching, and operations in a high-volume environment.</li>
-      </ul>
-    </section>
-
-    <section id="skills" aria-labelledby="skills-h">
-      <h2 id="skills-h">Core Skills</h2>
-      <ul>
-        <li>Cloud Computing, API Integration, Python, Terraform, Kubernetes</li>
-        <li>Linux Administration, Networking, DICOM, DevOps, VM Management</li>
-        <li>Monitoring tools, SaaS, Web Technologies, Incident Management</li>
-      </ul>
-    </section>
-
-    <section id="certs" aria-labelledby="certs-h">
-      <h2 id="certs-h">Certifications & Training</h2>
-      <ul>
-        <li>LFCS — Linux Foundation Certified System Administrator (May 2023)</li>
-        <li>DevOps Bootcamp</li>
-        <li>CCNA Networking Fundamentals</li>
-        <li>Automation with Python</li>
-        <li>Power BI Master Class</li>
-        <li>REST API Testing</li>
-        <li>Microsoft Excel Advanced — <a href="https://www.udemy.com/certificate/UC-f8b18805-51fd-409c-a952-d7f33bfc2d3e/" target="_blank" rel="noopener">View Credential</a></li>
-        <li><a href="https://www.linkedin.com/in/eric-fields-80497b232/details/certifications/" target="_blank" rel="noopener">View More on LinkedIn</a></li>
-      </ul>
-    </section>
-
-    <section id="projects" aria-labelledby="projects-h">
-      <h2 id="projects-h">Projects</h2>
-      <ul>
-        <li>Migrated an on-prem application to a MultiCloud Architecture | Cloud Bootcamp</li>
-        <li>Designed a customizable auditing process for a major SaaS client | Foodlogiq</li>
-        <li>Integrated secure messaging channel access — improved one-contact resolution by 71%</li>
-      </ul>
-    </section>
-
-    <!-- ✅ Colleague Testimonials -->
-    <section id="testimonials" aria-labelledby="testimonials-h">
-      <h2 id="testimonials-h">Colleague Testimonials</h2>
+    <!-- ✅ Colleague Testimonials (with captions, hover, and staggered entrance) -->
+    <section id="testimonials">
+      <h2>Colleague Testimonials</h2>
       <div class="testimonials">
 
         <article class="testimonial-card">
-          <figure>
-            <a href="images/kudos1.png" target="_blank" rel="noopener">
-              <img src="images/kudos1.png" alt="Kudos note praising empathy and resolution with a frustrated customer" class="testimonial-img" loading="lazy" />
-            </a>
-            <figcaption class="testimonial-caption">Kudos screenshot (click to view full size)</figcaption>
-          </figure>
-          <p>“Eric jumped into a fire today with a very frustrated customer, and by the end of the call she was laughing and relieved. Not only did Eric resolve the issues, but he empathized and made her feel heard and important. Thank you Eric and the ENTIRE Support team for your professionalism—all of your hard work does not go unnoticed!” ⭐⭐⭐⭐⭐</p>
+          <p>"Eric jumped into a fire today with a very frustrated customer, and by the end of the call she was laughing and relieved. Not only did Eric resolve the issues, but he empathized and made her feel heard and important. Thank you Eric and the ENTIRE Support team for your professionalism—all of your hard work does not go unnoticed!" ⭐⭐⭐⭐⭐</p>
+          <a href="images/kudos1.png" target="_blank" rel="noopener">
+            <img src="images/kudos1.png" alt="Customer empathy kudos screenshot" class="testimonial-img" />
+          </a>
+          <div class="testimonial-caption">Customer Empathy Kudos</div>
         </article>
 
         <article class="testimonial-card">
-          <figure>
-            <a href="images/kudos2.png" target="_blank" rel="noopener">
-              <img src="images/kudos2.png" alt="Kudos referencing proactive monitoring that impressed a radiology team" class="testimonial-img" loading="lazy" />
-            </a>
-            <figcaption class="testimonial-caption">Kudos screenshot (click to view full size)</figcaption>
-          </figure>
-          <p>“The Radiology team at Cleveland Clinic raved about our proactive monitoring. They said they’ve been trying to get vendors to do this for years, and Eric delivered. Eric notified them about an issue they didn’t even know they had and resolved it. The client was so appreciative and impressed with how proactive and thorough he was. Huge thank you to Eric for setting such a high standard and representing Viz so well!” 🎉</p>
+          <p>"The Radiology team at Cleveland Clinic raved about our proactive monitoring. They said they’ve been trying to get vendors to do this for years, and Eric delivered. Eric notified them about an issue they didn’t even know they had and resolved it. The client was so appreciative and impressed with how proactive and thorough he was. Huge thank you to Eric for setting such a high standard and representing Viz so well!" 🎉</p>
+          <a href="images/kudos2.png" target="_blank" rel="noopener">
+            <img src="images/kudos2.png" alt="Proactive monitoring kudos screenshot" class="testimonial-img" />
+          </a>
+          <div class="testimonial-caption">Proactive Monitoring Kudos</div>
+        </article>
+
+        <article class="testimonial-card">
+          <p>"An interesting discrepancy in scan uploads was noted across multiple sites for a customer. To best understand the issue, Eric reached out for clarification, then provided quick, detailed follow-up on each site’s data and offered to be a resource when presenting the data to the customer. Eric exemplifies going above and beyond, solving problems quickly and creatively, and truly differentiating our service from any other vendor." 🙌</p>
+          <a href="images/kudos3.png" target="_blank" rel="noopener">
+            <img src="images/kudos3.png" alt="Detailed follow-up kudos screenshot" class="testimonial-img" />
+          </a>
+          <div class="testimonial-caption">Detailed Follow-up Kudos</div>
         </article>
 
       </div>
     </section>
 
-    <footer role="contentinfo">
-      &copy; 2025 Eric Fields. All rights reserved.
-    </footer>
-  </main>
+  </div>
 </body>
 </html>
