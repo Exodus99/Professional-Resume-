@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eric Fields Resume</title>
   <style>
     body {
@@ -60,10 +60,9 @@
       gap: 1.5em;
     }
     @media (min-width: 900px) {
-      .testimonials { grid-template-columns: repeat(3, 1fr); }
+      .testimonials { grid-template-columns: repeat(2, 1fr); }
     }
 
-    /* initial state for staggered entrance */
     .testimonial-card {
       background: rgba(255, 255, 255, 0.05);
       border-left: 5px solid #00bfff;
@@ -83,6 +82,7 @@
     .testimonial-card:nth-child(1) { animation-delay: 120ms; }
     .testimonial-card:nth-child(2) { animation-delay: 320ms; }
     .testimonial-card:nth-child(3) { animation-delay: 520ms; }
+    .testimonial-card:nth-child(4) { animation-delay: 720ms; }
 
     /* hover lift + glow */
     .testimonial-card:hover {
@@ -137,9 +137,9 @@
 
     <p>Experienced Technical Support Engineer with a strong background in cloud platforms, DevOps, networking, and AI-based technologies. Proven track record of solving complex problems, driving operational excellence, and delivering value to both technical and non-technical users.</p>
 
-    <!-- (Keep your Education, Work Experience, Skills, Certifications, and Projects sections here) -->
+    <!-- (Other sections: Education, Work Experience, Skills, Certifications, Projects go here) -->
 
-    <!-- ✅ Colleague Testimonials (with captions, hover, and staggered entrance) -->
+    <!-- ✅ Colleague Testimonials -->
     <section id="testimonials">
       <h2>Colleague Testimonials</h2>
       <div class="testimonials">
@@ -166,6 +166,14 @@
             <img src="images/kudos3.png" alt="Detailed follow-up kudos screenshot" class="testimonial-img" />
           </a>
           <div class="testimonial-caption">Detailed Follow-up Kudos</div>
+        </article>
+
+        <article class="testimonial-card">
+          <p>"I want to thank Eric Fields for jumping into a fire today…we had a very frustrated customer and by the end of the call, she was laughing and her relief was palpable! Not only did Eric resolve the issues but he sympathized and made her feel heard and important. Thank you Eric and the ENTIRE Support team for your professionalism…all of your hard work does not go unnoticed!! ⭐⭐⭐⭐⭐"</p>
+          <a href="images/kudos4.png" target="_blank" rel="noopener">
+            <img src="images/kudos4.png" alt="Customer relief kudos screenshot" class="testimonial-img" />
+          </a>
+          <div class="testimonial-caption">Customer Relief Kudos</div>
         </article>
 
       </div>
